@@ -37,6 +37,9 @@ hystrix:
           enabled: false
         isolation:
           strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 30000
+
 ribbon:
   ConnectTimeout:  10000
   ReadTimeout:  10000

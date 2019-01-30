@@ -1,10 +1,12 @@
 server:
   port: ${PORT:8080}
 zuul:
+  ignoredServices: "*"
   routes:
     service1:
       path: /service1/**
       serviceId: SERVICE1
+      ignoredServices: "*"
   add-proxy-headers: true
 
 ---
