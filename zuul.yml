@@ -1,0 +1,12 @@
+server:
+  port: ${PORT:8080}
+zuul:
+  routes:
+    service1:
+      path: /service1/**
+      serviceId: SERVICE1
+  add-proxy-headers: true
+
+---
+spring:
+  profiles: producao
